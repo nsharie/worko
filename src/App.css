@@ -1,5 +1,5 @@
 
-section{
+.hero{
   position: relative;
   background-image: radial-gradient(20.6% 35.2% at 65% -15%,#6f06f0 -182%, #03000000 105%);
   /* background-image: (red 0%, orange 25%, yellow 50%, green 75%, blue 100%); */
@@ -13,13 +13,19 @@ section{
   justify-content: center;
   align-items: center;
 }
-
+.tables{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
 .integrations{
   width: 100%;
   height: 50%;
   /* margin: 0.1rem 5rem; */
   /* margin-top: 9rem; */
   line-height: 2.5;
+  padding: 0;
+  margin: 0;
 }
 
 .text h2{

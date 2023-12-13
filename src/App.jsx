@@ -1,13 +1,11 @@
-import { useState } from 'react'
 import HeroImage from './assets/demo_image.png';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <section className='relative'>
+      <section className='relative hero'>
         <div className="integrations grid grid-cols-1 lg:grid-cols-2 gap-40 md:px-24 py-7 gap-20 sm:px-16 gap-20 py-7 lg:px-32 py-9 gap-20 xl:px-40 py-9 gap-20">
           <div className="text flex-col justify-start items-center">
             <h2>APP INTEGRATIONS</h2>
@@ -20,11 +18,11 @@ function App() {
           </div>
         </div>
       </section>
-
-      <div className="communication flex justify-center items-center relative">
-        <h1 className='relative'>Communication</h1>
-      </div>
-
+      <section className='tables'>
+        <div className="communication flex justify-center items-center relative">
+          <h1 className='relative'>Communication</h1>
+        </div>
+      </section>
     </>
   )
 }
