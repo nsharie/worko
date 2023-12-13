@@ -21,8 +21,19 @@ function App() {
         </div>
       </div>
       <div className='tables'>
-        <div className="communication flex justify-center items-center relative">
-          <h1 className='relative comm text-gray-400'>Communication</h1>
+        <div className="communication flex justify-center items-center gap-40 flex-cols">
+          <div className="communication-container flex flex-col">
+            <h1 className='relative comm text-gray-400'>Communication</h1>
+            <p className='text-xl text-gray-500 font-normal'>Seemlessly use your preferred tools for unified work, start to finish.</p>
+            <div className='grid grid-cols-3 gap-4 gap-y-10 auto-cols-max tables-columns'>
+                <div>01</div>
+                <div>02</div>
+                <div>03</div>
+                <div>04</div>
+                <div>05</div>
+                <div>06</div>
+            </div>
+          </div>
         </div>
       </div>
     </>

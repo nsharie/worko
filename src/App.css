@@ -120,6 +120,10 @@
 
 /* --- tables class starts */
 
+.tables{
+  text-align: center;
+}
+
 .tables h1{
   font-family: "SF Pro Display Medium", -apple-system, BlinkMacSystemFont, sans-serif ;
   font-size:36px;
@@ -128,6 +132,19 @@
   font-variant-east-asian: normal ;
   font-variant-ligatures: normal;
   font-variant-numeric: normal;
-  font-weight: 400
+  font-weight: 400;
+}
+
+.tables-columns{
+  margin-top: 3rem;
+}
+
+.tables-columns div{
+  width: 20rem;
+  height: 8rem;
+  background: #121218;
+  border: 1px solid rgb(45, 45, 45);
+  border-radius: 7px;
+  aspect-ratio: 1;
 }
 /* --- tables class ends */
