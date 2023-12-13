@@ -1,12 +1,10 @@
-body{
-  background-color: #09090f;
-}
 
 section{
-  background-image: radial-gradient(19.6% 25.2% at 60% -15%,#6f06f0 0%,rgba(3,-10,-20,0) 120%);
+  position: relative;
+  background-image: radial-gradient(20.6% 35.2% at 65% -15%,#6f06f0 -182%, #03000000 105%);
   /* background-image: (red 0%, orange 25%, yellow 50%, green 75%, blue 100%); */
   width: 100%;
-  height: 100%;
+  height: 90vh;
   top: 0;
   margin: 0;
   padding: 0;
@@ -32,8 +30,44 @@ section{
   margin-top: 1.5em;
 }
 
-@media(width<640px){
+@media(400px<width<640px){
   .integrations{
     padding: 9rem 5rem;
+  }
+}
+
+@media(width<400px){
+  .integrations{
+    padding: 3rem 1rem;
+  }
+
+  .img img{
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media(1000px<width<1024px){
+  .img img{
+    width: 50%;
+    height: 50%;
+  }
+}
+
+.img img{
+  width: 63%;
+  height: 110%;
+  margin-top: -3rem;
+  opacity: 1;
+  animation: rotation 12s infinite linear;
+  border-radius: 50%;
+}
+
+@keyframes rotation{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(359deg);
   }
 }
