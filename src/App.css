@@ -1,0 +1,39 @@
+body{
+  background-color: #09090f;
+}
+
+section{
+  background-image: radial-gradient(19.6% 25.2% at 60% -15%,#6f06f0 0%,rgba(3,-10,-20,0) 120%);
+  /* background-image: (red 0%, orange 25%, yellow 50%, green 75%, blue 100%); */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.integrations{
+  width: 100%;
+  height: 50%;
+  /* margin: 0.1rem 5rem; */
+  /* margin-top: 9rem; */
+  line-height: 2.5;
+}
+
+.text h2{
+  color: #a408ff;
+}
+
+.text p, h1{
+  margin-top: 1.5em;
+}
+
+@media(width<640px){
+  .integrations{
+    padding: 9rem 5rem;
+  }
+}
