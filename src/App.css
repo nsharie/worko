@@ -1,12 +1,12 @@
-
+/* --- hero class starts --- */
 .hero{
-  position: relative;
-  background-image: radial-gradient(20.6% 35.2% at 65% -15%,#6f06f0 -182%, #03000000 105%);
+  position: absolute;
+  background-image: radial-gradient(400px 220px at 65% -15%,#6f06f0 -182%, #03000000 105%);
   /* background-image: (red 0%, orange 25%, yellow 50%, green 75%, blue 100%); */
   width: 100%;
-  height: 90vh;
+  height: min-content;
   top: 0;
-  margin: 0;
+  margin: 0 0;
   padding: 0;
   left: 0;
   display: flex;
@@ -16,16 +16,14 @@
 .tables{
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: min-content;
 }
 .integrations{
   width: 100%;
   height: 50%;
-  /* margin: 0.1rem 5rem; */
-  /* margin-top: 9rem; */
   line-height: 2.5;
   padding: 0;
-  margin: 0;
+  margin: 7rem 0;
 }
 
 .text h2{
@@ -36,34 +34,74 @@
   margin-top: 1.5em;
 }
 
-@media(400px<width<640px){
-  .integrations{
-    padding: 9rem 5rem;
+
+@media screen and (min-width:1024px){
+  .image-wrapper{
+    width: 100% !important;
   }
 }
 
-@media(width<400px){
+@media(800px<width<1024px){
+  .img{
+    width: 100%;
+  }
+  .integrations{
+    margin: 4rem 0;
+  }
+  .image-wrapper{
+    width: 70% !important;
+  }
+}
+
+@media(400px<width<640px){
+  .integrations{
+    padding: 4rem 3rem;
+    margin: 2rem 0;
+  }
+
+  .text{
+    line-height: 1.5;
+  }
+
+  .text h1{
+    font-size: 3rem;
+  }
+}
+
+@media screen and (width<400px){
   .integrations{
     padding: 3rem 1rem;
   }
 
-  .img img{
-    width: 50px;
-    height: 50px;
+  .text{
+    line-height: 1.2;
+  }
+
+  .text h1{
+    font-size: 2.5rem;
+  }
+
+  .hero-image{
+    width: 200px;
+    height: 200px;
   }
 }
-
-@media(1000px<width<1024px){
-  .img img{
-    width: 50%;
-    height: 50%;
-  }
+.image-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.img{
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
 }
 
 .img img{
-  width: 63%;
-  height: 110%;
-  margin-top: -3rem;
+  width: 80%;
+  height: 80%;
   opacity: 1;
   animation: rotation 12s infinite linear;
   border-radius: 50%;
@@ -77,3 +115,19 @@
     transform: rotate(359deg);
   }
 }
+
+/* --- hero class ends --- */
+
+/* --- tables class starts */
+
+.tables h1{
+  font-family: "SF Pro Display Medium", -apple-system, BlinkMacSystemFont, sans-serif ;
+  font-size:36px;
+  font-style: normal ;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal ;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 400
+}
+/* --- tables class ends */
