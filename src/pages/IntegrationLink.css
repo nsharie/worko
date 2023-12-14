@@ -1,4 +1,3 @@
-
 .hero {
     position: absolute;
     background-image: radial-gradient(400px 220px at 65% -15%, #6f06f0 -182%, #03000000 105%);
@@ -184,11 +183,23 @@
         height: 3rem;
         padding: 0.1rem 0.1rem;
     }
+    .tables{
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 }
+
 
 @media(width<300px){
     .header{
         position: absolute;
         margin-left: 1px;
+    }
+}
+
+@media(min-width:300px){
+    .tables{
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }

@@ -1,10 +1,9 @@
 import React from "react";
 import "./IntegrationLink.css";
 import { Link } from "react-router-dom";
-import Telegramlogo from "../assets/logos/telegram-logo.svg";
+// import Telegramlogo from "../assets/logos/telegram-logo.svg";
 import {integration} from "../data/integrations.js";
 import { useLocation } from "react-router-dom";
-import { data } from "autoprefixer";
 
 export default function IntegrationsLink() {
 
@@ -52,8 +51,8 @@ export default function IntegrationsLink() {
           </div>
         </div>
 
-        <div className="tables flex flex-cols gap-4 mt-15 px-16 py-16">
-          <div className="left-side w-6/12 max-w-[240px] flex flex-cols place-content-start gap-4">
+        <div className="tables flex flex-cols gap-4 mt-15 px-12 py-16  sm:block md:flex lg:flex">
+          <div className="left-side w-6/12  flex flex-cols place-content-start gap-4 ssm:w-full sm:w-full">
             <div className="upper flex justify-start items-start">
               <div className="outer-div flex justify-center items-center">
                 {/* <img src={Telegramlogo}/> */}
@@ -80,7 +79,7 @@ export default function IntegrationsLink() {
             <div className="divider"></div>
           </div>
           <div className="right-side w-full">
-            <div className="image-holder flex justify-start items-center w-full ms-5">
+            <div className="image-holder flex justify-start items-center w-full ms-5 sm:mt-5">
               <img className="w-full" src={dataInt[0].img} alt="" />
             </div>
             <div className="content text-gray-500 text-left mr-9">
