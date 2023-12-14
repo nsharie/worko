@@ -1,7 +1,6 @@
-import HeroImage from "./assets/demo_image.png";
-import react from "@vitejs/plugin-react-swc";
+import HeroImage from "./assets/final_image.png";
+import React from "react";
 import './Integrations.css';
-import './App.css'
 
 export default function Integrations(){
     return(
