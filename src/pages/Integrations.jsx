@@ -49,6 +49,7 @@ export default function Integrations(){
               finish.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-6 mx-auto tables-columns">
+              <Link to="/integrations/medium">
               <div className="outer-div flex flex-cols justify-start">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -66,6 +67,8 @@ export default function Integrations(){
                   </p>
                 </div>
               </div>
+              </Link>
+              <Link to="/integrations/patreon">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -83,6 +86,8 @@ export default function Integrations(){
                   </p>
                 </div>
               </div>
+              </Link>
+              <Link to="/integrations/slack">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -100,6 +105,8 @@ export default function Integrations(){
                   </p>
                 </div>
               </div>
+              </Link>
+              <Link to="/integrations/notion">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -118,6 +125,8 @@ export default function Integrations(){
                   </p>
                 </div>
               </div>
+              </Link>
+              <Link to="/integrations/stackoverflow">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -135,6 +144,8 @@ export default function Integrations(){
                   </p>
                 </div>
               </div>
+              </Link>
+              <Link to="/integrations/teams">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -152,6 +163,8 @@ export default function Integrations(){
                   </p>
                 </div>
               </div>
+              </Link>
+              <Link to="integrations/discord">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -170,6 +183,8 @@ export default function Integrations(){
                   </p>
                 </div>
               </div>
+              </Link>
+              <Link to="integrations/outlook">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -188,6 +203,7 @@ export default function Integrations(){
                   </p>
                 </div>
               </div>
+              </Link>
             </div>
           </div>
         </div>

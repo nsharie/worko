@@ -1,10 +1,22 @@
 import React from "react";
 import "./IntegrationLink.css";
-import Telegram from "../assets/Telegram.jpg";
 import { Link } from "react-router-dom";
-import Telegramlogo from "../assets/telegram-logo.svg";
+import Telegramlogo from "../assets/logos/telegram-logo.svg";
+import {integration} from "../data/integrations.js";
+import { useLocation } from "react-router-dom";
 
 export default function IntegrationsLink() {
+
+  const location = useLocation();
+  const dataInt = integration.filter((elem) => elem.param === location.pathname.split("/")[2])
+  // console.log(dataInt)
+  // console.log(location.pathname.split("/")[2], integration, dataInt)
+  // console.log(location)
+  if(dataInt.categories === "Communication"){
+    const box = document.getElementById('box');
+    box.style.background = 'red';
+  }
+
   return (
     <>
       {/* Hero Section Starts */}
@@ -32,7 +44,7 @@ export default function IntegrationsLink() {
               </svg>
             </div>
             <div className="text-xl text-gray-500">{">"}</div>
-            <div className="text-gray-500">Integrations</div>
+            <Link to="/"><div className="text-gray-500 cursor-pointer">Integrations</div></Link>
             <div className="text-xl text-gray-500">{">"}</div>
             <div>medium</div>
           </div>
@@ -44,7 +56,7 @@ export default function IntegrationsLink() {
               <div className="outer-div flex justify-center items-center">
                 <img src={Telegramlogo}/>
               </div>
-              <div className="px-5 py-4 font-semibold text-xl">Telegram</div>
+              <div className="px-5 py-4 font-semibold text-xl">{dataInt[0].title}</div>
             </div>
             <div className="left-side-info">
               <p>Made by</p>
@@ -54,19 +66,19 @@ export default function IntegrationsLink() {
 
             <div className="left-side-info">
               <p>Website</p>
-              <p className="text-blue-900"><Link to="https://telegram.org/">telegram.org</Link></p>
+              <p className="text-blue-900"><Link to={dataInt[0].website_link}>{dataInt[0].website}</Link></p>
             </div>
             <div className="divider"></div>
 
             <div className="left-side-info">
               <p>Categories</p>
-              <div className="categories">Marketing & Design</div>
+              <div className="categories" id="box">{dataInt[0].categories}</div>
             </div>
             <div className="divider"></div>
           </div>
           <div className="right-side w-full">
             <div className="image-holder flex justify-start items-center w-full ms-5">
-              <img className="w-full" src={Telegram} alt="" />
+              <img className="w-full" src={dataInt[0].img} alt="" />
             </div>
             <div className="content text-gray-500 text-left mr-9">
               Worko integrates with Pinterest to simplify task management.
@@ -129,16 +141,16 @@ export default function IntegrationsLink() {
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
                     <div className="image flex justify-center items-center">
-                      <div className="flex justify-center items-center">M</div>
+                      <div className="flex justify-center items-center">{dataInt[0].bottom_symbol1}</div>
                     </div>
                   </div>
                   <span className="mx-3 text-gray-300 font-semibold">
-                    Medium
+                    {dataInt[0].bottom_title1}
                   </span>
                 </div>
                 <div className="mt-2">
                   <p className="p text-left text-gray-500 font-semibold">
-                    Worko's Medium integration enhances content management.
+                    {dataInt[0].bottom_info1}
                   </p>
                 </div>
               </div>
@@ -146,16 +158,16 @@ export default function IntegrationsLink() {
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
                     <div className="image flex justify-center items-center">
-                      <div className="flex justify-center items-center">P</div>
+                      <div className="flex justify-center items-center">{dataInt[0].bottom_symbol2}</div>
                     </div>
                   </div>
                   <span className="mx-3 text-gray-300 font-semibold">
-                    Patreon
+                    {dataInt[0].bottom_title2}
                   </span>
                 </div>
                 <div className="mt-2">
                   <p className="p text-left text-gray-500 font-semibold">
-                    Worko's Patreon integration provides strong support.
+                    {dataInt[0].bottom_info2}
                   </p>
                 </div>
               </div>
@@ -163,16 +175,16 @@ export default function IntegrationsLink() {
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
                     <div className="image flex justify-center items-center">
-                      <div className="flex justify-center items-center">S</div>
+                      <div className="flex justify-center items-center">{dataInt[0].bottom_symbol3}</div>
                     </div>
                   </div>
                   <span className="mx-3 text-gray-300 font-semibold">
-                    Slack
+                    {dataInt[0].bottom_title3}
                   </span>
                 </div>
                 <div className="mt-2">
                   <p className="p text-left text-gray-500 font-semibold">
-                    Effortlessly centralize team communication and boost.
+                    {dataInt[0].bottom_info3}
                   </p>
                 </div>
               </div>  
