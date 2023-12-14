@@ -51,8 +51,8 @@ export default function IntegrationsLink() {
           </div>
         </div>
 
-        <div className="tables flex flex-cols gap-4 mt-15 px-12 py-16  sm:block md:flex lg:flex">
-          <div className="left-side w-6/12  flex flex-cols place-content-start gap-4 ssm:w-full sm:w-full">
+        <div className="tables flex-cols gap-4 mt-15 px-12 py-16 block md:flex lg:flex">
+          <div className="left-side w-full  flex flex-cols place-content-start gap-4 ssm:w-full sm:w-full">
             <div className="upper flex justify-start items-start">
               <div className="outer-div flex justify-center items-center">
                 {/* <img src={Telegramlogo}/> */}
