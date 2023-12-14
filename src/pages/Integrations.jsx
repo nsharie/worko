@@ -219,6 +219,7 @@ export default function Integrations(){
               Seemlessly integrate your engineering workflows
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-6 mx-auto tables-columns">
+              <Link to="/integrations/coda">
               <div className="outer-div flex flex-cols justify-start">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -236,6 +237,8 @@ export default function Integrations(){
                   </p>
                 </div>
               </div>
+              </Link>
+              <Link to="/integrations/dev-to">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -253,6 +256,8 @@ export default function Integrations(){
                   </p>
                 </div>
               </div>
+              </Link>
+              <Link to="/integrations/angular">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -270,6 +275,8 @@ export default function Integrations(){
                   </p>
                 </div>
               </div>
+              </Link>
+              <Link to="/integrations/codepen">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -287,6 +294,8 @@ export default function Integrations(){
                   </p>
                 </div>
               </div>
+              </Link>
+              <Link to="/integrations/github">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -304,6 +313,8 @@ export default function Integrations(){
                   </p>
                 </div>
               </div>
+              </Link>
+              <Link to="/integrations/codesandbox">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -321,6 +332,8 @@ export default function Integrations(){
                   </p>
                 </div>
               </div>
+              </Link>
+              <Link to="/integrations/webhooks">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -338,6 +351,8 @@ export default function Integrations(){
                   </p>
                 </div>
               </div>
+              </Link>
+              <Link to="/integrations/gitlab">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -355,6 +370,7 @@ export default function Integrations(){
                   </p>
                 </div>
               </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -391,6 +407,7 @@ export default function Integrations(){
                 </div>
               </div>
               </Link>
+              <Link to="/integrations/pinterest">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -408,6 +425,8 @@ export default function Integrations(){
                   </p>
                 </div>
               </div>
+              </Link>
+              <Link to="/integrations/behance">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -425,6 +444,8 @@ export default function Integrations(){
                   </p>
                 </div>
               </div>
+              </Link>
+              <Link to="/integrations/dribbble">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -442,6 +463,8 @@ export default function Integrations(){
                   </p>
                 </div>
               </div>
+              </Link>
+              <Link to="/integrations/sketch">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -450,68 +473,73 @@ export default function Integrations(){
                     </div>
                   </div>
                   <span className="mx-3 text-gray-300 font-semibold">
-                    Stack overflow
+                    Sketch
                   </span>
                 </div>
                 <div className="mt-2">
                   <p className="p text-left text-gray-500 font-semibold">
-                    Join a thriving developer community for coding solutions.
+                    Streamline your design process and create captivating digital.
                   </p>
                 </div>
               </div>
+              </Link>
+              <Link to="/integrations/youtube">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
                     <div className="image flex justify-center items-center">
-                      <div className="flex justify-center items-center">M</div>
+                      <div className="flex justify-center items-center">Y</div>
                     </div>
                   </div>
                   <span className="mx-3 text-gray-300 font-semibold">
-                    Microsoft teams
+                    Youtube
                   </span>
                 </div>
                 <div className="mt-2">
                   <p className="p text-left text-gray-500 font-semibold">
-                    Empower teamwork, streamline collaboration, and enhance.
+                    Access a vast repository of videos spanning various topics.
                   </p>
                 </div>
               </div>
+              </Link>
+              <Link to="/integrations/figma">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
                     <div className="image flex justify-center items-center">
-                      <div className="flex justify-center items-center">D</div>
+                      <div className="flex justify-center items-center">F</div>
                     </div>
                   </div>
                   <span className="mx-3 text-gray-300 font-semibold">
-                    Discord
+                    Figma
                   </span>
                 </div>
                 <div className="mt-2">
                   <p className="p text-left text-gray-500 font-semibold">
-                    Connect with diverse online communities and engage in lively
-                    discussions
+                    Collaborate seamlessly on design projects and iterate.
                   </p>
                 </div>
               </div>
+              </Link>
+              <Link to="/integrations/framer">
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
                     <div className="image flex justify-center items-center">
-                      <div className="flex justify-center items-center">M</div>
+                      <div className="flex justify-center items-center">F</div>
                     </div>
                   </div>
                   <span className="mx-3 text-gray-300 font-semibold">
-                    Microsoft outlook
+                    Framer
                   </span>
                 </div>
                 <div className="mt-2">
                   <p className="p text-left text-gray-500 font-semibold">
-                    Manage emails, calenders, and appointments seamlessly with
-                    Outlook
+                    Craft interactive prototypes for engaging user experiences.
                   </p>
                 </div>
               </div>
+              </Link>
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Telegramlogo from "../assets/logos/telegram-logo.svg";
 import {integration} from "../data/integrations.js";
 import { useLocation } from "react-router-dom";
+import { data } from "autoprefixer";
 
 export default function IntegrationsLink() {
 
@@ -12,6 +13,7 @@ export default function IntegrationsLink() {
   // console.log(dataInt)
   // console.log(location.pathname.split("/")[2], integration, dataInt)
   // console.log(location)
+  const currentPath = location.pathname.split("/")[2];
   if(dataInt.categories === "Communication"){
     const box = document.getElementById('box');
     box.style.background = 'red';
@@ -46,7 +48,7 @@ export default function IntegrationsLink() {
             <div className="text-xl text-gray-500">{">"}</div>
             <Link to="/"><div className="text-gray-500 cursor-pointer">Integrations</div></Link>
             <div className="text-xl text-gray-500">{">"}</div>
-            <div>medium</div>
+            <div>{currentPath}</div>
           </div>
         </div>
 
@@ -54,7 +56,8 @@ export default function IntegrationsLink() {
           <div className="left-side w-6/12 max-w-[240px] flex flex-cols place-content-start gap-4">
             <div className="upper flex justify-start items-start">
               <div className="outer-div flex justify-center items-center">
-                <img src={Telegramlogo}/>
+                {/* <img src={Telegramlogo}/> */}
+                <div className="logo">{dataInt[0].logo}</div>
               </div>
               <div className="px-5 py-4 font-semibold text-xl">{dataInt[0].title}</div>
             </div>
