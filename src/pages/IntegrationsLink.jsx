@@ -1,6 +1,8 @@
 import React from "react";
 import "./IntegrationLink.css";
-import Telegram from "./assets/Telegram.png";
+import Telegram from "../assets/Telegram.jpg";
+import { Link } from "react-router-dom";
+import Telegramlogo from "../assets/telegram-logo.svg";
 
 export default function IntegrationsLink() {
   return (
@@ -40,7 +42,7 @@ export default function IntegrationsLink() {
           <div className="left-side w-6/12 max-w-[240px] flex flex-cols place-content-start gap-4">
             <div className="upper flex justify-start items-start">
               <div className="outer-div flex justify-center items-center">
-                T
+                <img src={Telegramlogo}/>
               </div>
               <div className="px-5 py-4 font-semibold text-xl">Telegram</div>
             </div>
@@ -52,7 +54,7 @@ export default function IntegrationsLink() {
 
             <div className="left-side-info">
               <p>Website</p>
-              <p className="text-blue-900">telegram.org</p>
+              <p className="text-blue-900"><Link to="https://telegram.org/">telegram.org</Link></p>
             </div>
             <div className="divider"></div>
 

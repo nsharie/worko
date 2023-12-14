@@ -1,6 +1,8 @@
-import HeroImage from "./assets/final_image.png";
+import HeroImage from "../assets/final_image.png";
 import React from "react";
 import './Integrations.css';
+import {Link} from 'react-router-dom'
+import IntegrationsLink from "./IntegrationsLink";
 
 export default function Integrations(){
     return(
@@ -354,6 +356,7 @@ export default function Integrations(){
               finish.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-6 mx-auto tables-columns">
+              <Link to="/integrations/telegram">
               <div className="outer-div flex flex-cols justify-start">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -371,6 +374,7 @@ export default function Integrations(){
                   </p>
                 </div>
               </div>
+              </Link>
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
