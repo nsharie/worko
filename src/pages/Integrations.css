@@ -32,6 +32,7 @@
     background-image: linear-gradient(0deg, var(--token-42ea10b2-e48e-4212-b779-e8b5392c3ad4, rgb(134, 36, 255)) 0%, var(--token-f7a55c60-f433-4865-90dc-be1a5d93ae54, rgb(233, 115, 187)) 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    background-clip: text;
   }
   
   .text p,
@@ -163,7 +164,81 @@
     cursor: pointer;
   }
   
+
+  .tables-columns .outer-div-hide {
+    width: 20rem;
+    height: 8rem;
+    background: #121218;
+    border: 1px solid rgb(45, 45, 45);
+    border-radius: 7px;
+    aspect-ratio: 1;
+    display: none;
+    flex-direction: column;
+    padding: 1.2rem 2rem;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+
+  .tables-columns .outer-div-hide-engg {
+    width: 20rem;
+    height: 8rem;
+    background: #121218;
+    border: 1px solid rgb(45, 45, 45);
+    border-radius: 7px;
+    aspect-ratio: 1;
+    display: none;
+    flex-direction: column;
+    padding: 1.2rem 2rem;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+
+  .tables-columns .outer-div-hide-market {
+    width: 20rem;
+    height: 8rem;
+    background: #121218;
+    border: 1px solid rgb(45, 45, 45);
+    border-radius: 7px;
+    aspect-ratio: 1;
+    display: none;
+    flex-direction: column;
+    padding: 1.2rem 2rem;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+
+  .button{
+    cursor: pointer;
+    color: rgba(177, 122, 245, 1);
+    font-family:  "SF Pro Display Medium", "-apple-system", "BlinkMacSystemFont", sans-serif;
+  }
+
+  .button-engg{
+    cursor: pointer;
+    color: rgba(177, 122, 245, 1);
+    font-family:  "SF Pro Display Medium", "-apple-system", "BlinkMacSystemFont", sans-serif;
+  }
+
+  .button-market{
+    cursor: pointer;
+    color: rgba(177, 122, 245, 1);
+    font-family:  "SF Pro Display Medium", "-apple-system", "BlinkMacSystemFont", sans-serif;
+  }
+
+  
   .tables-columns .outer-div:hover {
+    background: #24242c;
+  }
+
+  .tables-columns .outer-div-hide:hover {
+    background: #24242c;
+  }
+
+  .tables-columns .outer-div-hide-engg:hover {
+    background: #24242c;
+  }
+
+  .tables-columns .outer-div-hide-market:hover {
     background: #24242c;
   }
   
