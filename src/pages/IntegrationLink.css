@@ -1,6 +1,6 @@
-.hero {
+.hero1 {
     position: absolute;
-    background-image: radial-gradient(400px 220px at 65% -15%, #6f06f0 -182%, #03000000 105%);
+    background-image: radial-gradient(350px 150px at 65% -15%, #6f06f0 -250%, #03000000 105%);
     /* background-image: (red 0%, orange 25%, yellow 50%, green 75%, blue 100%); */
     width: 100%;
     height: min-content;
@@ -25,24 +25,6 @@
     position: sticky;
 }
 
-/* .left-side{
-    place-content: flex-start;
-    align-items: flex-start;
-    display: flex;
-    flex: 1 0 0px;
-    flex-flow: column;
-    gap: 20px;
-    height: min-content;
-    max-width: 240px;
-    overflow: hidden;
-    padding: 0px;
-    position: sticky;
-    top: 100px;
-    transform: perspective(1200px);
-    width: 1px;
-    will-change: transform;
-    z-index: 1;
-} */
 
 .left-side-info{
     place-content: center;
@@ -59,7 +41,27 @@
     font-size: 1rem;
 }
 
-.categories{
+#box-green{
+    font-size: 0.8rem;
+    place-content: flex-start;
+    align-items: center;
+    backdrop-filter: blur(12px);
+    background-color: rgba(26, 255, 129, 0.096);
+    border-radius: 6px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 0px 0px inset;
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: row;
+    gap: 8px;
+    height: min-content;
+    overflow: hidden;
+    padding: 4px 12px;
+    position: relative;
+    width: min-content;
+    color: rgba(9, 255, 83, 0.759);
+}
+
+#box-blue{
     font-size: 0.8rem;
     place-content: flex-start;
     align-items: center;
@@ -75,8 +77,28 @@
     overflow: hidden;
     padding: 4px 12px;
     position: relative;
-    width: 100%;
+    width: min-content;
     color: rgba(107, 216, 255, 0.759);
+}
+
+#box-yellow{
+    font-size: 0.8rem;
+    place-content: flex-start;
+    align-items: center;
+    backdrop-filter: blur(12px);
+    background-color: rgba(135, 95, 2, 0.096);
+    border-radius: 6px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 0px 0px inset;
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: row;
+    gap: 8px;
+    height: min-content;
+    overflow: hidden;
+    padding: 4px 12px;
+    position: relative;
+    width: min-content;
+    color: rgba(226, 132, 0, 0.997);
 }
 
 .divider{

@@ -24,7 +24,7 @@ export default function IntegrationsLink() {
     <>
       {/* Hero Section Starts */}
       <div className="main max-w-[1140px] mx-auto">
-        <div className="absolute hero">
+        <div className="absolute hero1">
           <div className="integrations"></div>
         </div>
 
@@ -76,7 +76,11 @@ export default function IntegrationsLink() {
 
             <div className="left-side-info">
               <p>Categories</p>
-              <div className="categories" id="box">{dataInt[0].categories}</div>
+              {/* <div className="categories" id="box">{dataInt[0].categories}</div> */}
+              {dataInt[0].categories === "Communication" && <div className="categories" id="box-green">{dataInt[0].categories}</div>}
+              {dataInt[0].categories === "Engineering" && <div className="categories" id="box-yellow">{dataInt[0].categories}</div>}
+              {dataInt[0].categories === "Marketing & Design" && <div className="categories" id="box-blue">{dataInt[0].categories}</div>}
+
             </div>
             <div className="divider"></div>
           </div>
