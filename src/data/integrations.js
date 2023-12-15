@@ -18,6 +18,9 @@ export const integration = [
         bottom_title3:"Notion",
         bottom_symbol3:"N",
         bottom_info3:"Customize versatile workspaces to enhances project management",
+        link_1:"/integrations/medium",
+        link_2:"integrations/patreon",
+        link_3:"integrations/notion",
     },
     {
         param: "slack",
@@ -37,6 +40,9 @@ export const integration = [
         bottom_title3:"Notion",
         bottom_symbol3:"N",
         bottom_info3:"Customize versatile workspaces to enhances project management",
+        link_1:"integrations/medium",
+        link_2:"integrations/patreon",
+        link_3:"integrations/notion",
     },
     {
         param: "patreon",
@@ -56,6 +62,9 @@ export const integration = [
         bottom_title3:"Notion",
         bottom_symbol3:"N",
         bottom_info3:"Customize versatile workspaces to enhances project management",
+        link_1:"integrations/medium",
+        link_2:"integrations/patreon",
+        link_3:"integrations/notion",
     },
     {
         param: "notion",
@@ -75,6 +84,9 @@ export const integration = [
         bottom_title3:"Notion",
         bottom_symbol3:"N",
         bottom_info3:"Customize versatile workspaces to enhances project management",
+        link_1:"integrations/medium",
+        link_2:"integrations/patreon",
+        link_3:"integrations/notion",
     },
     {
         param: "stackoverflow",
@@ -94,6 +106,9 @@ export const integration = [
         bottom_title3:"Notion",
         bottom_symbol3:"N",
         bottom_info3:"Customize versatile workspaces to enhances project management",
+        link_1:"integrations/medium",
+        link_2:"integrations/patreon",
+        link_3:"integrations/notion",
     },
     {
         param: "teams",
@@ -113,6 +128,9 @@ export const integration = [
         bottom_title3:"Notion",
         bottom_symbol3:"N",
         bottom_info3:"Customize versatile workspaces to enhances project management",
+        link_1:"integrations/medium",
+        link_2:"integrations/patreon",
+        link_3:"integrations/notion",
     },
     {
         param: "discord",
@@ -132,6 +150,9 @@ export const integration = [
         bottom_title3:"Notion",
         bottom_symbol3:"N",
         bottom_info3:"Customize versatile workspaces to enhances project management",
+        link_1:"integrations/medium",
+        link_2:"integrations/patreon",
+        link_3:"integrations/notion",
     },
     {
         param: "outlook",
@@ -151,6 +172,9 @@ export const integration = [
         bottom_title3:"Notion",
         bottom_symbol3:"N",
         bottom_info3:"Customize versatile workspaces to enhances project management",
+        link_1:"integrations/medium",
+        link_2:"integrations/patreon",
+        link_3:"integrations/notion",
     },
     // Communication Ends
 

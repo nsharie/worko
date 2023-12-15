@@ -10,7 +10,7 @@ export default function IntegrationsLink() {
   const location = useLocation();
   const dataInt = integration.filter((elem) => elem.param === location.pathname.split("/")[2])
   // console.log(dataInt)
-  // console.log(location.pathname.split("/")[2], integration, dataInt)
+  console.log(location.pathname.split("/")[2])
   // console.log(location)
   const currentPath = location.pathname.split("/")[2];
   if(dataInt.categories === "Communication"){
@@ -139,6 +139,7 @@ export default function IntegrationsLink() {
               finish.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-6 mx-auto tables-columns">
+              <Link to={dataInt[0].link_1}>
               <div className="outer-div flex flex-cols justify-start">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -156,6 +157,9 @@ export default function IntegrationsLink() {
                   </p>
                 </div>
               </div>
+              </Link>
+
+              <Link to={dataInt[0].link_2}>
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -173,6 +177,9 @@ export default function IntegrationsLink() {
                   </p>
                 </div>
               </div>
+              </Link>
+
+              <Link to={dataInt[0].link_3}>
               <div className="outer-div">
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
@@ -189,7 +196,8 @@ export default function IntegrationsLink() {
                     {dataInt[0].bottom_info3}
                   </p>
                 </div>
-              </div>  
+              </div> 
+              </Link> 
             </div>
           </div>
         </div>
