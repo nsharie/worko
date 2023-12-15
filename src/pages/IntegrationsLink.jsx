@@ -1,21 +1,23 @@
 import React from "react";
 import "./IntegrationLink.css";
-import { Link } from "react-router-dom";
-// import Telegramlogo from "../assets/logos/telegram-logo.svg";
+import { Link, Navigate } from "react-router-dom";
 import {integration} from "../data/integrations.js";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function IntegrationsLink() {
 
   const location = useLocation();
+  const navigate = useNavigate();
   const dataInt = integration.filter((elem) => elem.param === location.pathname.split("/")[2])
-  // console.log(dataInt)
   console.log(location.pathname.split("/")[2])
-  // console.log(location)
   const currentPath = location.pathname.split("/")[2];
   if(dataInt.categories === "Communication"){
     const box = document.getElementById('box');
     box.style.background = 'red';
+  }
+
+  const handleClick = (link) =>{
+    navigate(link);
   }
 
   return (
@@ -139,8 +141,8 @@ export default function IntegrationsLink() {
               finish.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-6 mx-auto tables-columns">
-              <Link to={dataInt[0].link_1}>
-              <div className="outer-div flex flex-cols justify-start">
+              
+              <div className="outer-div flex flex-cols justify-start" onClick={() => handleClick(dataInt[0].link_1)}>
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
                     <div className="image flex justify-center items-center">
@@ -157,10 +159,8 @@ export default function IntegrationsLink() {
                   </p>
                 </div>
               </div>
-              </Link>
 
-              <Link to={dataInt[0].link_2}>
-              <div className="outer-div">
+              <div className="outer-div" onClick={() => handleClick(dataInt[0].link_2)}>
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
                     <div className="image flex justify-center items-center">
@@ -177,10 +177,8 @@ export default function IntegrationsLink() {
                   </p>
                 </div>
               </div>
-              </Link>
 
-              <Link to={dataInt[0].link_3}>
-              <div className="outer-div">
+              <div className="outer-div" onClick={() => handleClick(dataInt[0].link_3)}>
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
                     <div className="image flex justify-center items-center">
@@ -197,7 +195,6 @@ export default function IntegrationsLink() {
                   </p>
                 </div>
               </div> 
-              </Link> 
             </div>
           </div>
         </div>
