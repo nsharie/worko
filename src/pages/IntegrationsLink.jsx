@@ -1,24 +1,49 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./IntegrationLink.css";
 import { Link, Navigate } from "react-router-dom";
 import {integration} from "../data/integrations.js";
 import { useLocation, useNavigate } from "react-router-dom";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
 
 export default function IntegrationsLink() {
+
+  const animate = useRef();
+  const belowAnimate = useRef();
+
+  const { contextSafe } = useGSAP({scope:animate});
+  useGSAP(()=>{
+    gsap.from(belowAnimate.current,{
+      opacity:0,
+      y:100,
+      duration:0.6,
+    });
+  }, {scope:belowAnimate});
+
+  window.addEventListener("load", contextSafe(() => {
+    gsap.from(animate.current, {
+      opacity:0,
+      y:100,
+      duration:0.6,
+    })
+  }))
 
   const location = useLocation();
   const navigate = useNavigate();
   const dataInt = integration.filter((elem) => elem.param === location.pathname.split("/")[2])
   console.log(location.pathname.split("/")[2])
   const currentPath = location.pathname.split("/")[2];
-  if(dataInt.categories === "Communication"){
-    const box = document.getElementById('box');
-    box.style.background = 'red';
-  }
+
 
   const handleClick = (link) =>{
-    navigate(link);
+    window.scrollTo({
+      top:0,
+      behavior:"smooth",
+    });
+    navigate(link);    
   }
+
 
   return (
     <>
@@ -28,7 +53,7 @@ export default function IntegrationsLink() {
           <div className="integrations"></div>
         </div>
 
-        <div className="header mt-24 sm:ml-14 md:ml-24 lg:ml-16">
+        <div className="header mt-24 sm:ml-14 md:ml-24 lg:ml-16" ref={animate}>
           <div className="flex flex-row container gap-5">
             <div className="image-container">
               <svg
@@ -53,12 +78,11 @@ export default function IntegrationsLink() {
           </div>
         </div>
 
-        <div className="tables flex-cols gap-4 mt-15 px-12 py-16 block md:flex lg:flex">
+        <div className="tables flex-cols gap-4 mt-15 px-12 py-16 block md:flex lg:flex" ref={belowAnimate}>
           <div className="left-side w-full  flex flex-cols place-content-start gap-4 ssm:w-full sm:w-full">
             <div className="upper flex justify-start items-start">
               <div className="outer-div flex justify-center items-center">
-                {/* <img src={Telegramlogo}/> */}
-                <div className="logo">{dataInt[0].logo}</div>
+                <img className="logo" src={dataInt[0].logo} alt="image-logo" />
               </div>
               <div className="px-5 py-4 font-semibold text-xl">{dataInt[0].title}</div>
             </div>
@@ -149,8 +173,8 @@ export default function IntegrationsLink() {
               <div className="outer-div flex flex-cols justify-start" onClick={() => handleClick(dataInt[0].link_1)}>
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
-                    <div className="image flex justify-center items-center">
-                      <div className="flex justify-center items-center">{dataInt[0].bottom_symbol1}</div>
+                    <div className="image-icon flex justify-center items-center">
+                      <div className="flex justify-center items-center"><img className="bottom-logo" src={dataInt[0].bottom_symbol1} alt="bottom-image"></img></div>
                     </div>
                   </div>
                   <span className="mx-3 text-gray-300 font-semibold">
@@ -167,8 +191,8 @@ export default function IntegrationsLink() {
               <div className="outer-div" onClick={() => handleClick(dataInt[0].link_2)}>
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
-                    <div className="image flex justify-center items-center">
-                      <div className="flex justify-center items-center">{dataInt[0].bottom_symbol2}</div>
+                    <div className="image-icon flex justify-center items-center">
+                      <div className="flex justify-center items-center"><img className="bottom-logo" src={dataInt[0].bottom_symbol2} alt="bottom-image" /></div>
                     </div>
                   </div>
                   <span className="mx-3 text-gray-300 font-semibold">
@@ -185,8 +209,8 @@ export default function IntegrationsLink() {
               <div className="outer-div" onClick={() => handleClick(dataInt[0].link_3)}>
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
-                    <div className="image flex justify-center items-center">
-                      <div className="flex justify-center items-center">{dataInt[0].bottom_symbol3}</div>
+                    <div className="image-icon flex justify-center items-center">
+                      <div className="flex justify-center items-center"><img className="bottom-logo" src={dataInt[0].bottom_symbol3} alt="bottom-image" /></div>
                     </div>
                   </div>
                   <span className="mx-3 text-gray-300 font-semibold">

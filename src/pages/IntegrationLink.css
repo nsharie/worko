@@ -210,6 +210,18 @@
     place-content: flex-start;
 }
 
+.logo{
+    width: 2rem;
+    height: 2rem;
+}
+
+.bottom-logo{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+
+
 @media(width<640px){
     .header{
         margin-left: 13%;

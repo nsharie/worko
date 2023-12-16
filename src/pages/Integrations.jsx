@@ -3,22 +3,23 @@ import React from "react";
 import "./Integrations.css";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
+import {integration} from "../data/integrations.js";
 // import IntegrationsLink from "./IntegrationsLink";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 export default function Integrations() {
   const animate = useRef();
-  // console.log(animate);
+  
   const { contextSafe } = useGSAP({scope:animate});
 
   console.log(contextSafe);
 
   window.addEventListener("load", contextSafe(() => {
-    gsap.from("hero", {
+    gsap.from(animate.current, {
       opacity:0,
-      x:400,
-      duration:3,
+      y:100,
+      duration:0.6,
     })
   }))
   // Show/hide function for communication
@@ -66,8 +67,8 @@ export default function Integrations() {
   return (
     <>
       {/* Hero Section Starts  */}
-      <div className="relative hero" ref={animate}>
-        <div className="integrations grid grid-cols-1 lg:grid-cols-2 gap-40 justify-center md:px-24 py-7 gap-20 sm:px-16 gap-20 py-7 lg:px-32 py-9 gap-20 xl:px-40 py-9 gap-20">
+      <div className="relative hero" >
+        <div className="integrations grid grid-cols-1 lg:grid-cols-2 gap-40 justify-center md:px-24 py-7 gap-20 sm:px-16 gap-20 py-7 lg:px-32 py-9 gap-20 xl:px-40 py-9 gap-20" ref={animate}>
           <div className="text flex flex-col justify-center items-start">
             <h2>APP INTEGRATIONS</h2>
             <h1 className="xl:text-6xl md:text-6xl lg:text-6xl sm:text-5xl">
@@ -111,9 +112,9 @@ export default function Integrations() {
                 <div className="outer-div flex flex-cols justify-start">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          M
+                          <img className="img-container" src="https://framerusercontent.com/images/KdEfpxCHd96fylnTMKzni4zL1U.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -132,9 +133,9 @@ export default function Integrations() {
                 <div className="outer-div">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          P
+                        <img className="img-container" src="https://framerusercontent.com/images/bdD8iT5T5scUFk4UpNbygYMU4.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -153,9 +154,9 @@ export default function Integrations() {
                 <div className="outer-div">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          S
+                        <img className="img-container" src="https://framerusercontent.com/images/fi6YZVIWF4vUX87DH7ByL1SIZk.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -174,9 +175,9 @@ export default function Integrations() {
                 <div className="outer-div">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          N
+                        <img className="img-container" src="https://framerusercontent.com/images/GmMHJ6xyjsvJDQfFlslLI6c1SQ.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -196,9 +197,9 @@ export default function Integrations() {
                 <div className="outer-div">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          S
+                        <img className="img-container" src="https://framerusercontent.com/images/yk5PFJNqpmnxdVsGjZKJopLI0.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -217,9 +218,9 @@ export default function Integrations() {
                 <div className="outer-div">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          M
+                        <img className="img-container" src="https://framerusercontent.com/images/fCglyxryD2zJfPIeaHmCEgl3aIs.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -238,9 +239,9 @@ export default function Integrations() {
                 <div className="outer-div-hide">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          D
+                        <img className="img-container" src="https://framerusercontent.com/images/mv920C0srvgua3MmaVtRbrnuE.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -260,9 +261,9 @@ export default function Integrations() {
                 <div className="outer-div-hide">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          M
+                        <img className="img-container" src="https://framerusercontent.com/images/pxO8Kf5atWTwTwzqtnaLNeQXw.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -305,9 +306,9 @@ export default function Integrations() {
                 <div className="outer-div flex flex-cols justify-start">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          C
+                        <img className="img-container" src="https://framerusercontent.com/images/Mi2uwZzBOQmF7lmaFF5YvxGTmw.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -326,9 +327,9 @@ export default function Integrations() {
                 <div className="outer-div">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          D
+                        <img className="img-container" src="https://framerusercontent.com/images/MVTBU2Nb8y50K74t808FcR4iuTE.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -347,9 +348,9 @@ export default function Integrations() {
                 <div className="outer-div">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          A
+                        <img className="img-container" src="https://framerusercontent.com/images/TtTBYaH8RUSMz9mphSR6bsT5AM.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -369,9 +370,9 @@ export default function Integrations() {
                 <div className="outer-div">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          C
+                        <img className="img-container" src="https://framerusercontent.com/images/4HHHR2qsVdQs6gbigKdOUSkshg.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -390,9 +391,9 @@ export default function Integrations() {
                 <div className="outer-div">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          G
+                        <img className="img-container" src="https://framerusercontent.com/images/g6eSOVzUGbKkTfohusvTwH5U.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -411,9 +412,9 @@ export default function Integrations() {
                 <div className="outer-div">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          C
+                        <img className="img-container" src="https://framerusercontent.com/images/FCz5RngQzNP1n1IWuoXImHm5Sf4.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -432,9 +433,9 @@ export default function Integrations() {
                 <div className="outer-div-hide-engg">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          W
+                        <img className="img-container" src="https://framerusercontent.com/images/ayiFNCOfljug44c3ZoatXUv0pag.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -453,9 +454,9 @@ export default function Integrations() {
                 <div className="outer-div-hide-engg">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          G
+                        <img className="img-container" src="https://framerusercontent.com/images/qFVWTXyc9OnwbW3XDRzEVJFZ1hg.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -499,9 +500,9 @@ export default function Integrations() {
                 <div className="outer-div flex flex-cols justify-start">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          T
+                        <img className="img-container" src="https://framerusercontent.com/images/8tQIapfwnH0vnMTJF4nXlDB0pQc.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -521,9 +522,9 @@ export default function Integrations() {
                 <div className="outer-div">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          P
+                        <img className="img-container" src="https://framerusercontent.com/images/Nqk6KagDMoXtUbJOFhBNyEwaagk.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -543,9 +544,9 @@ export default function Integrations() {
                 <div className="outer-div">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          B
+                        <img className="img-container" src="https://framerusercontent.com/images/1NRUcAu3ZkOMtBX8OzgWSePFdS4.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -564,9 +565,9 @@ export default function Integrations() {
                 <div className="outer-div">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          D
+                        <img className="img-container" src="https://framerusercontent.com/images/rRIFRS2X4xzFtcMNxmjwa7760.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -585,9 +586,9 @@ export default function Integrations() {
                 <div className="outer-div">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          S
+                        <img className="img-container" src="https://framerusercontent.com/images/QZYzQXWtOeRi7Wh9FVAhbaGbUeQ.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -607,9 +608,9 @@ export default function Integrations() {
                 <div className="outer-div">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          Y
+                        <img className="img-container" src="https://framerusercontent.com/images/VlrUYDZimiVY91VtEmYmPpKyY.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -629,9 +630,9 @@ export default function Integrations() {
                 <div className="outer-div-hide-market">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          F
+                        <img className="img-container" src="https://framerusercontent.com/images/GvHXgBvtueCgg8kHdVYbJyIcKo4.svg" alt="images" />
                         </div>
                       </div>
                     </div>
@@ -650,9 +651,9 @@ export default function Integrations() {
                 <div className="outer-div-hide-market">
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
-                      <div className="image flex justify-center items-center">
+                      <div className="image-icon flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                          F
+                        <img className="img-container" src="https://framerusercontent.com/images/HMp1ApDIPyavBy4zbdxCpOcfyKM.svg" alt="images" />
                         </div>
                       </div>
                     </div>
