@@ -89,7 +89,7 @@ export default function IntegrationsLink() {
               <img className="w-full" src={dataInt[0].img} alt="" />
             </div>
             <div className="content text-gray-500 text-left mr-9">
-              Worko integrates with Pinterest to simplify task management.
+             {dataInt[0].img_data}
             </div>
             <div className="columns ms-5 gap-10">
               <div>

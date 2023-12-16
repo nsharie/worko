@@ -2,9 +2,25 @@ import HeroImage from "../assets/final_image.png";
 import React from "react";
 import "./Integrations.css";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 // import IntegrationsLink from "./IntegrationsLink";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export default function Integrations() {
+  const animate = useRef();
+  // console.log(animate);
+  const { contextSafe } = useGSAP({scope:animate});
+
+  console.log(contextSafe);
+
+  window.addEventListener("load", contextSafe(() => {
+    gsap.from("hero", {
+      opacity:0,
+      x:400,
+      duration:3,
+    })
+  }))
   // Show/hide function for communication
   function handleToggle() {
     if (document.getElementsByClassName("outer-div-hide")) {
@@ -50,7 +66,7 @@ export default function Integrations() {
   return (
     <>
       {/* Hero Section Starts  */}
-      <div className="relative hero">
+      <div className="relative hero" ref={animate}>
         <div className="integrations grid grid-cols-1 lg:grid-cols-2 gap-40 justify-center md:px-24 py-7 gap-20 sm:px-16 gap-20 py-7 lg:px-32 py-9 gap-20 xl:px-40 py-9 gap-20">
           <div className="text flex flex-col justify-center items-start">
             <h2>APP INTEGRATIONS</h2>
