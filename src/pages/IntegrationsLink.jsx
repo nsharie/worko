@@ -11,28 +11,28 @@ export default function IntegrationsLink() {
 
   const animate = useRef();
   const belowAnimate = useRef();
+  const {contextSafe} = useGSAP({scope: belowAnimate},{scope: animate});
 
-  const { contextSafe } = useGSAP({scope:animate});
+
   useGSAP(()=>{
     gsap.from(belowAnimate.current,{
       opacity:0,
       y:100,
-      duration:0.6,
+      duration:1.2,
     });
   }, {scope:belowAnimate});
 
-  window.addEventListener("load", contextSafe(() => {
-    gsap.from(animate.current, {
+  useGSAP(()=>{
+    gsap.from(animate.current,{
       opacity:0,
       y:100,
-      duration:0.6,
-    })
-  }))
+      duration:1.2,
+    });
+  }, {scope:animate});
 
   const location = useLocation();
   const navigate = useNavigate();
   const dataInt = integration.filter((elem) => elem.param === location.pathname.split("/")[2])
-  console.log(location.pathname.split("/")[2])
   const currentPath = location.pathname.split("/")[2];
 
 
@@ -41,7 +41,20 @@ export default function IntegrationsLink() {
       top:0,
       behavior:"smooth",
     });
-    navigate(link);    
+    navigate(link);  
+
+    document.addEventListener("click", contextSafe(()=>{
+      gsap.from(belowAnimate.current, {
+        opacity:0,
+        y:400,
+        duration:1,
+      });
+      gsap.from(animate.current, {
+        opacity:0,
+        y:400,
+        duration:1,
+      });
+    }))
   }
 
 
@@ -170,7 +183,7 @@ export default function IntegrationsLink() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-6 mx-auto tables-columns">
               
-              <div className="outer-div flex flex-cols justify-start" onClick={() => handleClick(dataInt[0].link_1)}>
+              <div className="outer-div flex flex-cols justify-start" onClick={() => handleClick(dataInt[0].link_1)} >
                 <div className="feature-icon flex justify-start items-center">
                   <div className="image-holder flex justify-center items-center">
                     <div className="image-icon flex justify-center items-center">

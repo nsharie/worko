@@ -9,14 +9,13 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 export default function Integrations() {
-  const animate = useRef();
+  const animateHome = useRef();
   
-  const { contextSafe } = useGSAP({scope:animate});
+  const { contextSafe } = useGSAP({scope:animateHome});
 
-  console.log(contextSafe);
 
   window.addEventListener("load", contextSafe(() => {
-    gsap.from(animate.current, {
+    gsap.from(animateHome.current, {
       opacity:0,
       y:100,
       duration:0.6,
@@ -68,7 +67,7 @@ export default function Integrations() {
     <>
       {/* Hero Section Starts  */}
       <div className="relative hero" >
-        <div className="integrations grid grid-cols-1 lg:grid-cols-2 gap-40 justify-center md:px-24 py-7 gap-20 sm:px-16 gap-20 py-7 lg:px-32 py-9 gap-20 xl:px-40 py-9 gap-20" ref={animate}>
+        <div className="integrations grid grid-cols-1 lg:grid-cols-2 gap-40 justify-center md:px-24 py-7 gap-20 sm:px-16 gap-20 py-7 lg:px-32 py-9 gap-20 xl:px-40 py-9 gap-20" ref={animateHome}>
           <div className="text flex flex-col justify-center items-start">
             <h2>APP INTEGRATIONS</h2>
             <h1 className="xl:text-6xl md:text-6xl lg:text-6xl sm:text-5xl">
@@ -109,7 +108,7 @@ export default function Integrations() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-6 mx-auto tables-columns">
               <Link to="/integrations/medium">
-                <div className="outer-div flex flex-cols justify-start">
+                <div className="outer-div flex flex-cols justify-start" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -130,7 +129,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="/integrations/patreon">
-                <div className="outer-div">
+                <div className="outer-div" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -151,7 +150,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="/integrations/slack">
-                <div className="outer-div">
+                <div className="outer-div" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -172,7 +171,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="/integrations/notion">
-                <div className="outer-div">
+                <div className="outer-div" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -194,7 +193,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="/integrations/stackoverflow">
-                <div className="outer-div">
+                <div className="outer-div" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -215,7 +214,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="/integrations/teams">
-                <div className="outer-div">
+                <div className="outer-div" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -236,7 +235,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="integrations/discord">
-                <div className="outer-div-hide">
+                <div className="outer-div-hide" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -258,7 +257,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="integrations/outlook">
-                <div className="outer-div-hide">
+                <div className="outer-div-hide" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -312,7 +311,7 @@ export default function Integrations() {
                         </div>
                       </div>
                     </div>
-                    <span className="mx-3 text-gray-300 font-semibold">
+                    <span className="mx-3 text-gray-300 font-semibold" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                       Coda
                     </span>
                   </div>
@@ -324,7 +323,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="/integrations/dev-to">
-                <div className="outer-div">
+                <div className="outer-div" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -345,7 +344,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="/integrations/angular">
-                <div className="outer-div">
+                <div className="outer-div" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -367,7 +366,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="/integrations/codepen">
-                <div className="outer-div">
+                <div className="outer-div" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -388,7 +387,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="/integrations/github">
-                <div className="outer-div">
+                <div className="outer-div" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -409,7 +408,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="/integrations/codesandbox">
-                <div className="outer-div">
+                <div className="outer-div" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -430,7 +429,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="/integrations/webhooks">
-                <div className="outer-div-hide-engg">
+                <div className="outer-div-hide-engg" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -451,7 +450,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="/integrations/gitlab">
-                <div className="outer-div-hide-engg">
+                <div className="outer-div-hide-engg" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -497,7 +496,7 @@ export default function Integrations() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-6 mx-auto tables-columns">
               <Link to="/integrations/telegram">
-                <div className="outer-div flex flex-cols justify-start">
+                <div className="outer-div flex flex-cols justify-start" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -519,7 +518,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="/integrations/pinterest">
-                <div className="outer-div">
+                <div className="outer-div" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -541,7 +540,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="/integrations/behance">
-                <div className="outer-div">
+                <div className="outer-div" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -562,7 +561,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="/integrations/dribbble">
-                <div className="outer-div">
+                <div className="outer-div" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -583,7 +582,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="/integrations/sketch">
-                <div className="outer-div">
+                <div className="outer-div" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -605,7 +604,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="/integrations/youtube">
-                <div className="outer-div">
+                <div className="outer-div" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -627,7 +626,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="/integrations/figma">
-                <div className="outer-div-hide-market">
+                <div className="outer-div-hide-market" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
@@ -648,7 +647,7 @@ export default function Integrations() {
                 </div>
               </Link>
               <Link to="/integrations/framer">
-                <div className="outer-div-hide-market">
+                <div className="outer-div-hide-market" onClick={()=>{window.scrollTo({top:0, left:0, behavior:"smooth"})}}>
                   <div className="feature-icon flex justify-start items-center">
                     <div className="image-holder flex justify-center items-center">
                       <div className="image-icon flex justify-center items-center">
