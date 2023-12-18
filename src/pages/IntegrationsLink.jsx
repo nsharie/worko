@@ -11,6 +11,11 @@ export default function IntegrationsLink() {
   const animate = useRef();
   const belowAnimate = useRef();
 
+  const location = useLocation();
+  const navigate = useNavigate();
+  const dataInt = integration.filter((elem) => elem.param === location.pathname.split("/")[2])
+  const currentPath = location.pathname.split("/")[2];
+
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
         gsap.from(belowAnimate.current, {
@@ -25,12 +30,8 @@ export default function IntegrationsLink() {
         });
       })
       return () => ctx.revert();
-    }, [])
+    }, [currentPath])
 
-  const location = useLocation();
-  const navigate = useNavigate();
-  const dataInt = integration.filter((elem) => elem.param === location.pathname.split("/")[2])
-  const currentPath = location.pathname.split("/")[2];
 
 
   const handleClick = (link) =>{
@@ -39,8 +40,6 @@ export default function IntegrationsLink() {
       behavior:"smooth",
     });
     navigate(link);  
-
-
   }
 
 
