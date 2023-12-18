@@ -1,34 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import "./IntegrationLink.css";
 import { Link, Navigate } from "react-router-dom";
 import {integration} from "../data/integrations.js";
 import { useLocation, useNavigate } from "react-router-dom";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 
 export default function IntegrationsLink() {
 
   const animate = useRef();
   const belowAnimate = useRef();
-  const {contextSafe} = useGSAP({scope: belowAnimate},{scope: animate});
 
-
-  useGSAP(()=>{
-    gsap.from(belowAnimate.current,{
-      opacity:0,
-      y:100,
-      duration:1.2,
-    });
-  }, {scope:belowAnimate});
-
-  useGSAP(()=>{
-    gsap.from(animate.current,{
-      opacity:0,
-      y:100,
-      duration:1.2,
-    });
-  }, {scope:animate});
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+        gsap.from(belowAnimate.current, {
+          opacity:0,
+          y:100,
+          duration:1.2,
+        });
+        gsap.from(animate.current, {
+          opacity:0,
+          y:100,
+          duration:1.2,
+        });
+      })
+      return () => ctx.revert();
+    }, [])
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -43,18 +40,7 @@ export default function IntegrationsLink() {
     });
     navigate(link);  
 
-    document.addEventListener("click", contextSafe(()=>{
-      gsap.from(belowAnimate.current, {
-        opacity:0,
-        y:400,
-        duration:1,
-      });
-      gsap.from(animate.current, {
-        opacity:0,
-        y:400,
-        duration:1,
-      });
-    }))
+
   }
 
 
@@ -92,7 +78,7 @@ export default function IntegrationsLink() {
         </div>
 
         <div className="tables flex-cols gap-4 mt-15 px-12 py-16 block md:flex lg:flex" ref={belowAnimate}>
-          <div className="left-side w-full  flex flex-cols place-content-start gap-4 ssm:w-full sm:w-full">
+          <div className="left-side w-full  flex flex-cols place-content-start gap-4 sticky ssm:w-full sm:w-full">
             <div className="upper flex justify-start items-start">
               <div className="outer-div flex justify-center items-center">
                 <img className="logo" src={dataInt[0].logo} alt="image-logo" />

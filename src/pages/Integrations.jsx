@@ -4,23 +4,23 @@ import "./Integrations.css";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import {integration} from "../data/integrations.js";
-// import IntegrationsLink from "./IntegrationsLink";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import { useLayoutEffect } from "react";
 
 export default function Integrations() {
   const animateHome = useRef();
-  
-  const { contextSafe } = useGSAP({scope:animateHome});
 
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+        gsap.from(animateHome.current, {
+          opacity:0,
+          y:100,
+          duration:0.6,
+        });
+      })
+      return () => ctx.revert();
+    }, [])
 
-  window.addEventListener("load", contextSafe(() => {
-    gsap.from(animateHome.current, {
-      opacity:0,
-      y:100,
-      duration:0.6,
-    })
-  }))
   // Show/hide function for communication
   function handleToggle() {
     if (document.getElementsByClassName("outer-div-hide")) {
